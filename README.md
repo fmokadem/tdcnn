@@ -18,7 +18,7 @@ Here, we exploit the rank search space guided by a policy pdf approximated using
 
 Compressino results are shown in the table for the whole model to emphasize that not all CNNs are created equal. Low rank approximation is worth it best for architectures with lots of conv layers, and deep channels. 
 
-Also to note that a ~10% reduction in conv2D params can carry significant flops reduction. Which is to be expected as convolution is \[ O\left( C_{\text{in}} \cdot C_{\text{out}} \cdot H_{\text{out}} \cdot W_{\text{out}} \cdot H_f \cdot W_f \right) \] vs a linaer \[ O(N_{\text{in}} \cdot N_{\text{out}}) \] of Fully connected layers 
+Also to note that a ~10% reduction in conv2D params can carry significant flops reduction. Which is to be expected as convolution is O(C_in * C_out * H_out * W_out * H_f * W_f) vs a linaer O(N_in * N_out) of Fully connected layers 
 ```
 +---------+------------------+-------------+------------+----------+---------+-------------+---------------+------------+
 |  Model  |    Criterion     | Params Red. | FLOPs Red. | Accuracy | Speedup | Parameters  |     FLOPs     | Comp. Rate |
