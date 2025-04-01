@@ -12,6 +12,32 @@ Probabilistic methods like VBMF and Numerical methods like Singular Value Energy
 
 Here, we exploit the rank search space guided by a policy pdf approximated using the heuristics of layer sensitivity to decomposition and conv2d layer size. Outperfoms all methods, using only ~100 searches with <=3 epoch of finetune.  
 
+## Results
+
+### Performance Comparison
+
+The following table summarizes the best configurations found for each model across different optimization criteria:
+
+```
++---------+------------------+-------------+------------+----------+---------+-------------+---------------+------------+
+|  Model  |    Criterion     | Params Red. | FLOPs Red. | Accuracy | Speedup | Parameters  |     FLOPs     | Comp. Rate |
++---------+------------------+-------------+------------+----------+---------+-------------+---------------+------------+
+| Resnet  | Best Params Red. |   87.15%    |   84.67%   |  0.991   |  0.36x  |  1,436,382  |  279,777,098  |    7.78    |
+| Resnet  | Best FLOPs Red.  |   87.15%    |   84.67%   |  0.991   |  0.36x  |  1,436,382  |  279,777,098  |    7.78    |
+| Resnet  |   Best Speedup   |   28.71%    |   29.25%   |  0.994   |  0.89x  |  7,971,641  | 1,291,058,698 |    1.40    |
+| Alexnet | Best Params Red. |    2.01%    |   53.17%   |  0.988   |  0.55x  | 55,898,473  |  333,623,360  |    1.02    |
+| Alexnet | Best FLOPs Red.  |    2.01%    |   53.17%   |  0.988   |  0.55x  | 55,898,473  |  333,623,360  |    1.02    |
+| Alexnet |   Best Speedup   |    2.01%    |   53.17%   |  0.988   |  0.55x  | 55,898,473  |  333,623,360  |    1.02    |
+|   Vgg   | Best Params Red. |    9.64%    |   69.17%   |  0.993   |  0.26x  | 121,349,877 | 4,783,858,698 |    1.11    |
+|   Vgg   | Best FLOPs Red.  |    9.59%    |   69.63%   |  0.993   |  0.21x  | 121,420,990 | 4,712,633,866 |    1.11    |
+|   Vgg   |   Best Speedup   |    9.48%    |   68.42%   |  0.993   |  0.32x  | 121,565,134 | 4,900,492,810 |    1.10    |
++---------+------------------+-------------+------------+----------+---------+-------------+---------------+------------+
+```
+
+### Model Comparison Visualization
+
+![Model Comparison Radar Plot](model_comparison_radar.png)
+
 ## Repository Structure
 
 *   **.ipynb Notebooks:** (`htd-alexnet-res.ipynb`, `htd-vgg-res.ipynb`, `htd-resnet-res.ipynb`)
