@@ -1,0 +1,253 @@
+2025-03-26 03:36:42,653 - model_training_vgg16 - INFO - Initializing vgg16 training on cuda:1
+2025-03-26 03:36:44,122 - model_training_vgg16 - INFO - Model architecture:
+VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace=True)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace=True)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace=True)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace=True)
+    (16): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (17): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (18): ReLU(inplace=True)
+    (19): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace=True)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace=True)
+    (23): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (24): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (25): ReLU(inplace=True)
+    (26): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (27): ReLU(inplace=True)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace=True)
+    (30): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(7, 7))
+  (classifier): Sequential(
+    (0): Linear(in_features=25088, out_features=4096, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU(inplace=True)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=4096, out_features=10, bias=True)
+  )
+)
+2025-03-26 03:36:44,123 - model_training_vgg16 - INFO - Data loaders created with batch size 128
+2025-03-26 03:36:44,123 - model_training_vgg16 - INFO - Optimizer configured with lr=0.001, momentum=0.9, weight_decay=0.0005
+2025-03-26 03:36:44,123 - model_training_vgg16 - INFO - Starting epoch 1/50
+2025-03-26 03:44:49,648 - model_training_vgg16 - INFO - Epoch 1/50 completed - Average Loss: 0.1857
+2025-03-26 03:44:49,648 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 03:45:49,181 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.12%
+2025-03-26 03:45:49,181 - model_training_vgg16 - INFO - Starting epoch 2/50
+2025-03-26 03:53:52,784 - model_training_vgg16 - INFO - Epoch 2/50 completed - Average Loss: 0.0319
+2025-03-26 03:53:52,784 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 03:54:49,516 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.16%
+2025-03-26 03:54:49,517 - model_training_vgg16 - INFO - Starting epoch 3/50
+2025-03-26 04:02:49,048 - model_training_vgg16 - INFO - Epoch 3/50 completed - Average Loss: 0.0223
+2025-03-26 04:02:49,048 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 04:03:40,764 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.46%
+2025-03-26 04:03:40,764 - model_training_vgg16 - INFO - Starting epoch 4/50
+2025-03-26 04:11:24,777 - model_training_vgg16 - INFO - Epoch 4/50 completed - Average Loss: 0.0168
+2025-03-26 04:11:24,777 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 04:12:22,063 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.41%
+2025-03-26 04:12:22,063 - model_training_vgg16 - INFO - Starting epoch 5/50
+2025-03-26 04:20:07,016 - model_training_vgg16 - INFO - Epoch 5/50 completed - Average Loss: 0.0134
+2025-03-26 04:20:07,016 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 04:21:01,420 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.33%
+2025-03-26 04:21:01,420 - model_training_vgg16 - INFO - Starting epoch 6/50
+2025-03-26 04:28:51,310 - model_training_vgg16 - INFO - Epoch 6/50 completed - Average Loss: 0.0109
+2025-03-26 04:28:51,310 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 04:29:40,408 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.50%
+2025-03-26 04:29:40,408 - model_training_vgg16 - INFO - Starting epoch 7/50
+2025-03-26 04:37:25,636 - model_training_vgg16 - INFO - Epoch 7/50 completed - Average Loss: 0.0079
+2025-03-26 04:37:25,637 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 04:38:17,384 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.50%
+2025-03-26 04:38:17,384 - model_training_vgg16 - INFO - Starting epoch 8/50
+2025-03-26 04:46:22,194 - model_training_vgg16 - INFO - Epoch 8/50 completed - Average Loss: 0.0069
+2025-03-26 04:46:22,195 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 04:47:16,759 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.43%
+2025-03-26 04:47:16,759 - model_training_vgg16 - INFO - Starting epoch 9/50
+2025-03-26 04:55:07,629 - model_training_vgg16 - INFO - Epoch 9/50 completed - Average Loss: 0.0059
+2025-03-26 04:55:07,629 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 04:56:01,982 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.52%
+2025-03-26 04:56:01,982 - model_training_vgg16 - INFO - Starting epoch 10/50
+2025-03-26 05:03:56,000 - model_training_vgg16 - INFO - Epoch 10/50 completed - Average Loss: 0.0052
+2025-03-26 05:03:56,000 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 05:04:49,524 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.46%
+2025-03-26 05:04:49,524 - model_training_vgg16 - INFO - Starting epoch 11/50
+2025-03-26 05:12:52,795 - model_training_vgg16 - INFO - Epoch 11/50 completed - Average Loss: 0.0042
+2025-03-26 05:12:52,796 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 05:13:52,799 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.50%
+2025-03-26 05:13:52,800 - model_training_vgg16 - INFO - Starting epoch 12/50
+2025-03-26 05:21:55,498 - model_training_vgg16 - INFO - Epoch 12/50 completed - Average Loss: 0.0038
+2025-03-26 05:21:55,498 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 05:23:03,521 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.53%
+2025-03-26 05:23:03,521 - model_training_vgg16 - INFO - Starting epoch 13/50
+2025-03-26 05:31:05,837 - model_training_vgg16 - INFO - Epoch 13/50 completed - Average Loss: 0.0028
+2025-03-26 05:31:05,837 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 05:32:03,819 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.59%
+2025-03-26 05:32:03,820 - model_training_vgg16 - INFO - Starting epoch 14/50
+2025-03-26 05:39:56,686 - model_training_vgg16 - INFO - Epoch 14/50 completed - Average Loss: 0.0030
+2025-03-26 05:39:56,686 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 05:40:47,931 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.54%
+2025-03-26 05:40:47,931 - model_training_vgg16 - INFO - Starting epoch 15/50
+2025-03-26 05:48:47,626 - model_training_vgg16 - INFO - Epoch 15/50 completed - Average Loss: 0.0019
+2025-03-26 05:48:47,626 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 05:49:43,624 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 05:49:43,624 - model_training_vgg16 - INFO - Starting epoch 16/50
+2025-03-26 05:57:40,732 - model_training_vgg16 - INFO - Epoch 16/50 completed - Average Loss: 0.0025
+2025-03-26 05:57:40,732 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 05:58:33,604 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.58%
+2025-03-26 05:58:33,612 - model_training_vgg16 - INFO - Starting epoch 17/50
+2025-03-26 06:06:08,576 - model_training_vgg16 - INFO - Epoch 17/50 completed - Average Loss: 0.0018
+2025-03-26 06:06:08,576 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:06:27,967 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 06:06:27,967 - model_training_vgg16 - INFO - Starting epoch 18/50
+2025-03-26 06:10:36,020 - model_training_vgg16 - INFO - Epoch 18/50 completed - Average Loss: 0.0022
+2025-03-26 06:10:36,020 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:10:55,563 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.49%
+2025-03-26 06:10:55,564 - model_training_vgg16 - INFO - Starting epoch 19/50
+2025-03-26 06:15:03,189 - model_training_vgg16 - INFO - Epoch 19/50 completed - Average Loss: 0.0021
+2025-03-26 06:15:03,189 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:15:22,740 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.49%
+2025-03-26 06:15:22,740 - model_training_vgg16 - INFO - Starting epoch 20/50
+2025-03-26 06:19:30,319 - model_training_vgg16 - INFO - Epoch 20/50 completed - Average Loss: 0.0011
+2025-03-26 06:19:30,319 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:19:49,629 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.48%
+2025-03-26 06:19:49,629 - model_training_vgg16 - INFO - Starting epoch 21/50
+2025-03-26 06:23:56,848 - model_training_vgg16 - INFO - Epoch 21/50 completed - Average Loss: 0.0012
+2025-03-26 06:23:56,849 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:24:16,462 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 06:24:16,462 - model_training_vgg16 - INFO - Starting epoch 22/50
+2025-03-26 06:28:23,931 - model_training_vgg16 - INFO - Epoch 22/50 completed - Average Loss: 0.0012
+2025-03-26 06:28:23,931 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:28:43,355 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 06:28:43,356 - model_training_vgg16 - INFO - Starting epoch 23/50
+2025-03-26 06:32:48,390 - model_training_vgg16 - INFO - Epoch 23/50 completed - Average Loss: 0.0016
+2025-03-26 06:32:48,390 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:33:06,797 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 06:33:06,797 - model_training_vgg16 - INFO - Starting epoch 24/50
+2025-03-26 06:37:07,878 - model_training_vgg16 - INFO - Epoch 24/50 completed - Average Loss: 0.0008
+2025-03-26 06:37:07,879 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:37:26,294 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.50%
+2025-03-26 06:37:26,294 - model_training_vgg16 - INFO - Starting epoch 25/50
+2025-03-26 06:41:27,601 - model_training_vgg16 - INFO - Epoch 25/50 completed - Average Loss: 0.0009
+2025-03-26 06:41:27,601 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:41:46,102 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.42%
+2025-03-26 06:41:46,102 - model_training_vgg16 - INFO - Starting epoch 26/50
+2025-03-26 06:45:47,200 - model_training_vgg16 - INFO - Epoch 26/50 completed - Average Loss: 0.0013
+2025-03-26 06:45:47,200 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:46:05,567 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.53%
+2025-03-26 06:46:05,567 - model_training_vgg16 - INFO - Starting epoch 27/50
+2025-03-26 06:50:06,223 - model_training_vgg16 - INFO - Epoch 27/50 completed - Average Loss: 0.0011
+2025-03-26 06:50:06,223 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:50:24,690 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 06:50:24,690 - model_training_vgg16 - INFO - Starting epoch 28/50
+2025-03-26 06:54:25,503 - model_training_vgg16 - INFO - Epoch 28/50 completed - Average Loss: 0.0008
+2025-03-26 06:54:25,503 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:54:43,858 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.57%
+2025-03-26 06:54:43,858 - model_training_vgg16 - INFO - Starting epoch 29/50
+2025-03-26 06:58:44,214 - model_training_vgg16 - INFO - Epoch 29/50 completed - Average Loss: 0.0004
+2025-03-26 06:58:44,214 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 06:59:02,500 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.50%
+2025-03-26 06:59:02,500 - model_training_vgg16 - INFO - Starting epoch 30/50
+2025-03-26 07:03:03,147 - model_training_vgg16 - INFO - Epoch 30/50 completed - Average Loss: 0.0006
+2025-03-26 07:03:03,147 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:03:21,592 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 07:03:21,592 - model_training_vgg16 - INFO - Starting epoch 31/50
+2025-03-26 07:07:22,934 - model_training_vgg16 - INFO - Epoch 31/50 completed - Average Loss: 0.0005
+2025-03-26 07:07:22,934 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:07:41,365 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.60%
+2025-03-26 07:07:41,365 - model_training_vgg16 - INFO - Starting epoch 32/50
+2025-03-26 07:11:50,215 - model_training_vgg16 - INFO - Epoch 32/50 completed - Average Loss: 0.0005
+2025-03-26 07:11:50,215 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:12:08,833 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.60%
+2025-03-26 07:12:08,833 - model_training_vgg16 - INFO - Starting epoch 33/50
+2025-03-26 07:16:12,852 - model_training_vgg16 - INFO - Epoch 33/50 completed - Average Loss: 0.0004
+2025-03-26 07:16:12,852 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:16:31,656 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 07:16:31,656 - model_training_vgg16 - INFO - Starting epoch 34/50
+2025-03-26 07:20:35,858 - model_training_vgg16 - INFO - Epoch 34/50 completed - Average Loss: 0.0005
+2025-03-26 07:20:35,858 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:20:54,867 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.50%
+2025-03-26 07:20:54,867 - model_training_vgg16 - INFO - Starting epoch 35/50
+2025-03-26 07:24:59,646 - model_training_vgg16 - INFO - Epoch 35/50 completed - Average Loss: 0.0007
+2025-03-26 07:24:59,646 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:25:18,286 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.58%
+2025-03-26 07:25:18,286 - model_training_vgg16 - INFO - Starting epoch 36/50
+2025-03-26 07:29:22,205 - model_training_vgg16 - INFO - Epoch 36/50 completed - Average Loss: 0.0004
+2025-03-26 07:29:22,206 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:29:41,137 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.62%
+2025-03-26 07:29:41,137 - model_training_vgg16 - INFO - Starting epoch 37/50
+2025-03-26 07:33:46,117 - model_training_vgg16 - INFO - Epoch 37/50 completed - Average Loss: 0.0005
+2025-03-26 07:33:46,118 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:34:05,016 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.54%
+2025-03-26 07:34:05,016 - model_training_vgg16 - INFO - Starting epoch 38/50
+2025-03-26 07:38:09,438 - model_training_vgg16 - INFO - Epoch 38/50 completed - Average Loss: 0.0005
+2025-03-26 07:38:09,439 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:38:28,470 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.53%
+2025-03-26 07:38:28,470 - model_training_vgg16 - INFO - Starting epoch 39/50
+2025-03-26 07:42:32,746 - model_training_vgg16 - INFO - Epoch 39/50 completed - Average Loss: 0.0003
+2025-03-26 07:42:32,746 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:42:51,752 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.52%
+2025-03-26 07:42:51,752 - model_training_vgg16 - INFO - Starting epoch 40/50
+2025-03-26 07:46:56,184 - model_training_vgg16 - INFO - Epoch 40/50 completed - Average Loss: 0.0002
+2025-03-26 07:46:56,184 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:47:15,027 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.50%
+2025-03-26 07:47:15,027 - model_training_vgg16 - INFO - Starting epoch 41/50
+2025-03-26 07:51:19,505 - model_training_vgg16 - INFO - Epoch 41/50 completed - Average Loss: 0.0006
+2025-03-26 07:51:19,506 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:51:38,631 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.59%
+2025-03-26 07:51:38,631 - model_training_vgg16 - INFO - Starting epoch 42/50
+2025-03-26 07:55:43,396 - model_training_vgg16 - INFO - Epoch 42/50 completed - Average Loss: 0.0006
+2025-03-26 07:55:43,397 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 07:56:02,254 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.52%
+2025-03-26 07:56:02,255 - model_training_vgg16 - INFO - Starting epoch 43/50
+2025-03-26 08:00:07,143 - model_training_vgg16 - INFO - Epoch 43/50 completed - Average Loss: 0.0003
+2025-03-26 08:00:07,143 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 08:00:25,973 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 08:00:25,973 - model_training_vgg16 - INFO - Starting epoch 44/50
+2025-03-26 08:04:30,769 - model_training_vgg16 - INFO - Epoch 44/50 completed - Average Loss: 0.0003
+2025-03-26 08:04:30,769 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 08:04:49,596 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 08:04:49,596 - model_training_vgg16 - INFO - Starting epoch 45/50
+2025-03-26 08:08:54,368 - model_training_vgg16 - INFO - Epoch 45/50 completed - Average Loss: 0.0004
+2025-03-26 08:08:54,368 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 08:09:13,234 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 08:09:13,234 - model_training_vgg16 - INFO - Starting epoch 46/50
+2025-03-26 08:13:17,938 - model_training_vgg16 - INFO - Epoch 46/50 completed - Average Loss: 0.0004
+2025-03-26 08:13:17,938 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 08:13:36,624 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.49%
+2025-03-26 08:13:36,624 - model_training_vgg16 - INFO - Starting epoch 47/50
+2025-03-26 08:17:41,829 - model_training_vgg16 - INFO - Epoch 47/50 completed - Average Loss: 0.0003
+2025-03-26 08:17:41,829 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 08:18:00,649 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 08:18:00,650 - model_training_vgg16 - INFO - Starting epoch 48/50
+2025-03-26 08:22:04,858 - model_training_vgg16 - INFO - Epoch 48/50 completed - Average Loss: 0.0003
+2025-03-26 08:22:04,858 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 08:22:23,796 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.52%
+2025-03-26 08:22:23,796 - model_training_vgg16 - INFO - Starting epoch 49/50
+2025-03-26 08:26:28,139 - model_training_vgg16 - INFO - Epoch 49/50 completed - Average Loss: 0.0004
+2025-03-26 08:26:28,139 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 08:26:47,400 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.52%
+2025-03-26 08:26:47,400 - model_training_vgg16 - INFO - Starting epoch 50/50
+2025-03-26 08:30:51,991 - model_training_vgg16 - INFO - Epoch 50/50 completed - Average Loss: 0.0004
+2025-03-26 08:30:51,991 - model_training_vgg16 - INFO - Starting evaluation phase
+2025-03-26 08:31:10,807 - model_training_vgg16 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 08:31:11,755 - model_training_vgg16 - INFO - Model saved to ./saved_models/vgg16_mnist.pth
+2025-03-26 08:31:11,755 - model_training_vgg16 - INFO - Training log saved to ./logs/vgg16_training_log_20250326_083111.json
+2025-03-26 08:31:11,970 - model_training_vgg16 - INFO - Training curves plotted and saved to ./plots/vgg16_training_curves.png
+2025-03-26 08:31:11,971 - model_training_vgg16 - INFO - Training completed successfully!

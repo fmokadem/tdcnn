@@ -1,0 +1,292 @@
+2025-03-26 03:36:42,634 - model_training_resnet18 - INFO - Initializing resnet18 training on cuda:2
+2025-03-26 03:36:42,986 - model_training_resnet18 - INFO - Model architecture:
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+)
+2025-03-26 03:36:42,986 - model_training_resnet18 - INFO - Data loaders created with batch size 128
+2025-03-26 03:36:42,986 - model_training_resnet18 - INFO - Optimizer configured with lr=0.001, momentum=0.9, weight_decay=0.0005
+2025-03-26 03:36:42,986 - model_training_resnet18 - INFO - Starting epoch 1/50
+2025-03-26 03:40:20,676 - model_training_resnet18 - INFO - Epoch 1/50 completed - Average Loss: 0.2152
+2025-03-26 03:40:20,676 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 03:40:51,526 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.01%
+2025-03-26 03:40:51,526 - model_training_resnet18 - INFO - Starting epoch 2/50
+2025-03-26 03:44:29,774 - model_training_resnet18 - INFO - Epoch 2/50 completed - Average Loss: 0.0366
+2025-03-26 03:44:29,774 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 03:45:04,034 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.34%
+2025-03-26 03:45:04,034 - model_training_resnet18 - INFO - Starting epoch 3/50
+2025-03-26 03:48:46,460 - model_training_resnet18 - INFO - Epoch 3/50 completed - Average Loss: 0.0238
+2025-03-26 03:48:46,461 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 03:49:18,981 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.36%
+2025-03-26 03:49:18,981 - model_training_resnet18 - INFO - Starting epoch 4/50
+2025-03-26 03:52:52,569 - model_training_resnet18 - INFO - Epoch 4/50 completed - Average Loss: 0.0177
+2025-03-26 03:52:52,569 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 03:53:25,319 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.50%
+2025-03-26 03:53:25,319 - model_training_resnet18 - INFO - Starting epoch 5/50
+2025-03-26 03:57:13,295 - model_training_resnet18 - INFO - Epoch 5/50 completed - Average Loss: 0.0141
+2025-03-26 03:57:13,295 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 03:57:49,899 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.47%
+2025-03-26 03:57:49,899 - model_training_resnet18 - INFO - Starting epoch 6/50
+2025-03-26 04:01:22,758 - model_training_resnet18 - INFO - Epoch 6/50 completed - Average Loss: 0.0109
+2025-03-26 04:01:22,758 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:01:54,580 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.48%
+2025-03-26 04:01:54,580 - model_training_resnet18 - INFO - Starting epoch 7/50
+2025-03-26 04:05:49,445 - model_training_resnet18 - INFO - Epoch 7/50 completed - Average Loss: 0.0085
+2025-03-26 04:05:49,445 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:06:20,367 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.54%
+2025-03-26 04:06:20,367 - model_training_resnet18 - INFO - Starting epoch 8/50
+2025-03-26 04:09:54,963 - model_training_resnet18 - INFO - Epoch 8/50 completed - Average Loss: 0.0072
+2025-03-26 04:09:54,963 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:10:25,283 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.51%
+2025-03-26 04:10:25,283 - model_training_resnet18 - INFO - Starting epoch 9/50
+2025-03-26 04:14:14,311 - model_training_resnet18 - INFO - Epoch 9/50 completed - Average Loss: 0.0058
+2025-03-26 04:14:14,312 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:14:48,008 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.48%
+2025-03-26 04:14:48,008 - model_training_resnet18 - INFO - Starting epoch 10/50
+2025-03-26 04:18:30,276 - model_training_resnet18 - INFO - Epoch 10/50 completed - Average Loss: 0.0051
+2025-03-26 04:18:30,277 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:19:01,111 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.51%
+2025-03-26 04:19:01,111 - model_training_resnet18 - INFO - Starting epoch 11/50
+2025-03-26 04:22:43,950 - model_training_resnet18 - INFO - Epoch 11/50 completed - Average Loss: 0.0043
+2025-03-26 04:22:43,951 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:23:14,957 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 04:23:14,957 - model_training_resnet18 - INFO - Starting epoch 12/50
+2025-03-26 04:26:48,158 - model_training_resnet18 - INFO - Epoch 12/50 completed - Average Loss: 0.0038
+2025-03-26 04:26:48,159 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:27:22,020 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.49%
+2025-03-26 04:27:22,020 - model_training_resnet18 - INFO - Starting epoch 13/50
+2025-03-26 04:31:17,241 - model_training_resnet18 - INFO - Epoch 13/50 completed - Average Loss: 0.0033
+2025-03-26 04:31:17,242 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:31:52,097 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.51%
+2025-03-26 04:31:52,097 - model_training_resnet18 - INFO - Starting epoch 14/50
+2025-03-26 04:35:23,550 - model_training_resnet18 - INFO - Epoch 14/50 completed - Average Loss: 0.0028
+2025-03-26 04:35:23,550 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:35:57,310 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.51%
+2025-03-26 04:35:57,310 - model_training_resnet18 - INFO - Starting epoch 15/50
+2025-03-26 04:39:45,743 - model_training_resnet18 - INFO - Epoch 15/50 completed - Average Loss: 0.0026
+2025-03-26 04:39:45,744 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:40:17,928 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.51%
+2025-03-26 04:40:17,928 - model_training_resnet18 - INFO - Starting epoch 16/50
+2025-03-26 04:43:52,657 - model_training_resnet18 - INFO - Epoch 16/50 completed - Average Loss: 0.0023
+2025-03-26 04:43:52,657 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:44:26,551 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.51%
+2025-03-26 04:44:26,551 - model_training_resnet18 - INFO - Starting epoch 17/50
+2025-03-26 04:48:24,656 - model_training_resnet18 - INFO - Epoch 17/50 completed - Average Loss: 0.0021
+2025-03-26 04:48:24,656 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:48:57,238 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.57%
+2025-03-26 04:48:57,239 - model_training_resnet18 - INFO - Starting epoch 18/50
+2025-03-26 04:52:27,958 - model_training_resnet18 - INFO - Epoch 18/50 completed - Average Loss: 0.0019
+2025-03-26 04:52:27,958 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:52:59,030 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.54%
+2025-03-26 04:52:59,030 - model_training_resnet18 - INFO - Starting epoch 19/50
+2025-03-26 04:56:54,233 - model_training_resnet18 - INFO - Epoch 19/50 completed - Average Loss: 0.0018
+2025-03-26 04:56:54,233 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 04:57:29,962 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.50%
+2025-03-26 04:57:29,962 - model_training_resnet18 - INFO - Starting epoch 20/50
+2025-03-26 05:00:59,815 - model_training_resnet18 - INFO - Epoch 20/50 completed - Average Loss: 0.0016
+2025-03-26 05:00:59,816 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:01:30,865 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.54%
+2025-03-26 05:01:30,865 - model_training_resnet18 - INFO - Starting epoch 21/50
+2025-03-26 05:05:07,647 - model_training_resnet18 - INFO - Epoch 21/50 completed - Average Loss: 0.0016
+2025-03-26 05:05:07,648 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:05:37,519 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 05:05:37,519 - model_training_resnet18 - INFO - Starting epoch 22/50
+2025-03-26 05:09:11,634 - model_training_resnet18 - INFO - Epoch 22/50 completed - Average Loss: 0.0015
+2025-03-26 05:09:11,635 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:09:43,785 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.52%
+2025-03-26 05:09:43,785 - model_training_resnet18 - INFO - Starting epoch 23/50
+2025-03-26 05:13:42,297 - model_training_resnet18 - INFO - Epoch 23/50 completed - Average Loss: 0.0014
+2025-03-26 05:13:42,297 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:14:18,718 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.54%
+2025-03-26 05:14:18,718 - model_training_resnet18 - INFO - Starting epoch 24/50
+2025-03-26 05:17:54,671 - model_training_resnet18 - INFO - Epoch 24/50 completed - Average Loss: 0.0013
+2025-03-26 05:17:54,671 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:18:27,216 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 05:18:27,216 - model_training_resnet18 - INFO - Starting epoch 25/50
+2025-03-26 05:22:05,262 - model_training_resnet18 - INFO - Epoch 25/50 completed - Average Loss: 0.0012
+2025-03-26 05:22:05,262 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:22:48,723 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.58%
+2025-03-26 05:22:48,723 - model_training_resnet18 - INFO - Starting epoch 26/50
+2025-03-26 05:26:24,890 - model_training_resnet18 - INFO - Epoch 26/50 completed - Average Loss: 0.0011
+2025-03-26 05:26:24,890 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:26:55,944 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.53%
+2025-03-26 05:26:55,944 - model_training_resnet18 - INFO - Starting epoch 27/50
+2025-03-26 05:30:41,756 - model_training_resnet18 - INFO - Epoch 27/50 completed - Average Loss: 0.0011
+2025-03-26 05:30:41,756 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:31:15,385 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.50%
+2025-03-26 05:31:15,385 - model_training_resnet18 - INFO - Starting epoch 28/50
+2025-03-26 05:34:51,490 - model_training_resnet18 - INFO - Epoch 28/50 completed - Average Loss: 0.0011
+2025-03-26 05:34:51,490 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:35:24,176 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 05:35:24,176 - model_training_resnet18 - INFO - Starting epoch 29/50
+2025-03-26 05:38:47,841 - model_training_resnet18 - INFO - Epoch 29/50 completed - Average Loss: 0.0010
+2025-03-26 05:38:47,841 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:39:22,588 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.52%
+2025-03-26 05:39:22,588 - model_training_resnet18 - INFO - Starting epoch 30/50
+2025-03-26 05:43:03,803 - model_training_resnet18 - INFO - Epoch 30/50 completed - Average Loss: 0.0010
+2025-03-26 05:43:03,803 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:43:36,163 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 05:43:36,164 - model_training_resnet18 - INFO - Starting epoch 31/50
+2025-03-26 05:47:07,557 - model_training_resnet18 - INFO - Epoch 31/50 completed - Average Loss: 0.0009
+2025-03-26 05:47:07,558 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:47:41,343 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 05:47:41,343 - model_training_resnet18 - INFO - Starting epoch 32/50
+2025-03-26 05:51:31,996 - model_training_resnet18 - INFO - Epoch 32/50 completed - Average Loss: 0.0009
+2025-03-26 05:51:31,997 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:52:03,921 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 05:52:03,921 - model_training_resnet18 - INFO - Starting epoch 33/50
+2025-03-26 05:55:48,000 - model_training_resnet18 - INFO - Epoch 33/50 completed - Average Loss: 0.0008
+2025-03-26 05:55:48,001 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 05:56:23,593 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 05:56:23,593 - model_training_resnet18 - INFO - Starting epoch 34/50
+2025-03-26 06:00:15,158 - model_training_resnet18 - INFO - Epoch 34/50 completed - Average Loss: 0.0008
+2025-03-26 06:00:15,158 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:00:52,238 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.52%
+2025-03-26 06:00:52,238 - model_training_resnet18 - INFO - Starting epoch 35/50
+2025-03-26 06:04:19,228 - model_training_resnet18 - INFO - Epoch 35/50 completed - Average Loss: 0.0008
+2025-03-26 06:04:19,228 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:04:51,029 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 06:04:51,029 - model_training_resnet18 - INFO - Starting epoch 36/50
+2025-03-26 06:06:53,323 - model_training_resnet18 - INFO - Epoch 36/50 completed - Average Loss: 0.0008
+2025-03-26 06:06:53,323 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:07:04,145 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 06:07:04,145 - model_training_resnet18 - INFO - Starting epoch 37/50
+2025-03-26 06:08:38,090 - model_training_resnet18 - INFO - Epoch 37/50 completed - Average Loss: 0.0008
+2025-03-26 06:08:38,090 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:08:48,943 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.53%
+2025-03-26 06:08:48,943 - model_training_resnet18 - INFO - Starting epoch 38/50
+2025-03-26 06:10:19,504 - model_training_resnet18 - INFO - Epoch 38/50 completed - Average Loss: 0.0008
+2025-03-26 06:10:19,504 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:10:30,875 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.58%
+2025-03-26 06:10:30,876 - model_training_resnet18 - INFO - Starting epoch 39/50
+2025-03-26 06:12:02,626 - model_training_resnet18 - INFO - Epoch 39/50 completed - Average Loss: 0.0007
+2025-03-26 06:12:02,626 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:12:13,767 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 06:12:13,767 - model_training_resnet18 - INFO - Starting epoch 40/50
+2025-03-26 06:13:44,221 - model_training_resnet18 - INFO - Epoch 40/50 completed - Average Loss: 0.0007
+2025-03-26 06:13:44,221 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:13:54,686 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 06:13:54,686 - model_training_resnet18 - INFO - Starting epoch 41/50
+2025-03-26 06:15:25,685 - model_training_resnet18 - INFO - Epoch 41/50 completed - Average Loss: 0.0007
+2025-03-26 06:15:25,685 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:15:36,383 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 06:15:36,383 - model_training_resnet18 - INFO - Starting epoch 42/50
+2025-03-26 06:17:05,878 - model_training_resnet18 - INFO - Epoch 42/50 completed - Average Loss: 0.0007
+2025-03-26 06:17:05,878 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:17:16,673 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 06:17:16,673 - model_training_resnet18 - INFO - Starting epoch 43/50
+2025-03-26 06:18:47,830 - model_training_resnet18 - INFO - Epoch 43/50 completed - Average Loss: 0.0006
+2025-03-26 06:18:47,830 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:18:58,280 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.57%
+2025-03-26 06:18:58,280 - model_training_resnet18 - INFO - Starting epoch 44/50
+2025-03-26 06:20:29,689 - model_training_resnet18 - INFO - Epoch 44/50 completed - Average Loss: 0.0006
+2025-03-26 06:20:29,690 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:20:41,408 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 06:20:41,408 - model_training_resnet18 - INFO - Starting epoch 45/50
+2025-03-26 06:22:11,623 - model_training_resnet18 - INFO - Epoch 45/50 completed - Average Loss: 0.0006
+2025-03-26 06:22:11,623 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:22:22,568 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.58%
+2025-03-26 06:22:22,568 - model_training_resnet18 - INFO - Starting epoch 46/50
+2025-03-26 06:23:52,450 - model_training_resnet18 - INFO - Epoch 46/50 completed - Average Loss: 0.0006
+2025-03-26 06:23:52,450 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:24:03,699 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.54%
+2025-03-26 06:24:03,699 - model_training_resnet18 - INFO - Starting epoch 47/50
+2025-03-26 06:25:33,814 - model_training_resnet18 - INFO - Epoch 47/50 completed - Average Loss: 0.0006
+2025-03-26 06:25:33,814 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:25:44,744 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 06:25:44,744 - model_training_resnet18 - INFO - Starting epoch 48/50
+2025-03-26 06:27:14,613 - model_training_resnet18 - INFO - Epoch 48/50 completed - Average Loss: 0.0006
+2025-03-26 06:27:14,614 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:27:25,512 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.56%
+2025-03-26 06:27:25,513 - model_training_resnet18 - INFO - Starting epoch 49/50
+2025-03-26 06:28:56,189 - model_training_resnet18 - INFO - Epoch 49/50 completed - Average Loss: 0.0006
+2025-03-26 06:28:56,189 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:29:07,096 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.60%
+2025-03-26 06:29:07,096 - model_training_resnet18 - INFO - Starting epoch 50/50
+2025-03-26 06:30:41,392 - model_training_resnet18 - INFO - Epoch 50/50 completed - Average Loss: 0.0006
+2025-03-26 06:30:41,392 - model_training_resnet18 - INFO - Starting evaluation phase
+2025-03-26 06:30:52,522 - model_training_resnet18 - INFO - Evaluation completed - Test Accuracy: 99.55%
+2025-03-26 06:30:52,591 - model_training_resnet18 - INFO - Model saved to ./saved_models/resnet18_mnist.pth
+2025-03-26 06:30:52,591 - model_training_resnet18 - INFO - Training log saved to ./logs/resnet18_training_log_20250326_063052.json
+2025-03-26 06:30:52,788 - model_training_resnet18 - INFO - Training curves plotted and saved to ./plots/resnet18_training_curves.png
+2025-03-26 06:30:52,788 - model_training_resnet18 - INFO - Training completed successfully!
